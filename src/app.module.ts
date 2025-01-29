@@ -7,7 +7,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { MedicineSchema } from './medicine/medicine.schema';
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: 'Medicine', schema: MedicineSchema }]), MongooseModule.forRoot(process.env.MONGODB_URI)],
+  imports: [MongooseModule.forFeature([{ name: 'Medicine', schema: MedicineSchema }]), MongooseModule.forRoot("mongodb+srv://merisir:09062003mM@cluster0.hh3gw.mongodb.net/")],
   controllers: [AppController, MedicineController],
   providers: [AppService, MedicineService],
 })
